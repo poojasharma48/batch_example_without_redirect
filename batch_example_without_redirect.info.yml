@@ -1,0 +1,6 @@
+name: Batch example without redirect
+type: module
+description: Example to run batch process without redirection.
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10

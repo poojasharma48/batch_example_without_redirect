@@ -1,0 +1,6 @@
+node_update:
+  js:
+    js/nodeupdate.js: {}
+  dependencies:
+    - core/jquery
+    - core/once
