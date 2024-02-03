@@ -10,8 +10,8 @@ INSTALLATION
 ------------
 
   * Download the module & extract the zip folder, then rename folder 
-    from batch_example_without_redirect_main to 
-    batch_example_without_redirect.
+    from batch_example_without_redirect-main to 
+    batch_example_without_redirect
   * Install the Batch example without redirect module as you would normally 
     install a custom Drupal module. 
   
