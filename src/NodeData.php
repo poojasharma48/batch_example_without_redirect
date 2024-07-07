@@ -13,20 +13,17 @@ class NodeData {
   /**
    * Function to procecss the node data in batch.
    */
-  public static function processNodeData($nids, &$context) {
+  public static function processNodeData($id, &$context) {
     $message = 'Updating Node...';
 
-    $nodes = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple($nids);
-    foreach ($nodes as $node) {
-      $node = Node::load($node->id());
-      $title = $node->getTitle();
-      // Update node title, you can add any logic here as per need.
-      $node->setTitle('Update ' . $title);
-      $results[] = $node->save();
-    }
+    $node = Node::load($id);
+    $title = $node->getTitle();
+    // Update node title, you can add any logic here as per need.
+    $node->setTitle('Update ' . $title);
+    $results[] = $node->save();
 
     $context['message'] = $message;
-    $context['results'] = $results;
+    $context['results'][] = $id;
 
   }
 
