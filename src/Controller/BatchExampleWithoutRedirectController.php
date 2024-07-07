@@ -52,8 +52,7 @@ class BatchExampleWithoutRedirectController extends ControllerBase {
         ->setInitMessage($this->t('Updating Node.'))
         ->setErrorMessage($this->t('The process has encountered an error.'));
 
-      $ids_chunk = array_chunk($ids, 100);
-      foreach ($ids_chunk as $id) {
+      foreach ($ids as $id) {
         $batch_builder->addOperation([
           '\Drupal\batch_example_without_redirect\NodeData',
           'processNodeData',
